@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+.carousel-container {
+  position: relative;
+  height: 50vh;
+  width: 50%;
+}
+
+.carousel-track-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* border: 2px solid red; */
+}
+
+.carousel-track-container .carousel-track {
+  height: 100%;
+  /* width would be 100% times the number of the images used in the slider */
+  width: 400%;
+  display: flex;
+  transition: 500ms ease-out;
+}
+
+.carousel-action {
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: -10%;
+  color: #ff7300;
+}
+
+.carousel-action .slide-btn {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.carousel-indicator {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.carousel-indicator .indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.carousel-indicator .indicator:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicator .indicator.active {
+  background: rgba(0, 0, 0, 0.7);
+}
