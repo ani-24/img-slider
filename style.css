@@ -53,6 +53,7 @@ body {
 }
 
 .carousel-indicator {
+  margin-top: 20px;
   display: flex;
   list-style: none;
   justify-content: center;
